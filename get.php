@@ -16,10 +16,12 @@
 
 	$bdd = new PDO(DSN, DB_USERNAME, DB_PASSWORD);
 	$select_req = $bdd->prepare("SELECT annee, salaire FROM " . $table . " WHERE age = 0 AND sexe = '" . $sexe . "'");
+	$select_req_m = $bdd->prepare("SELECT annee, salaire FROM " . $table . " WHERE age = 0 AND sexe = 'h'");
 	//$select_req = $bdd->prepare("SELECT salaire FROM " . $table . " WHERE age = 0 AND sexe = '" . $sexe . "'");
 	$select_req->execute();
+	$select_req_m->execute();
 
-	$result = $select_req->fetchall(PDO::FETCH_NUM);
+	$result = array($select_req->fetchall(PDO::FETCH_NUM), $select_req_m->fetchall(PDO::FETCH_NUM));
 	echo json_encode($result);
 	exit();
 

@@ -26,26 +26,27 @@ function age_sexe_f() {
   req.onreadystatechange = function() {
     if (req.readyState == 4 && (req.status == 200 || req.status == 0)) {
       //return JSON.parse(req.responseText);
-      var abs = [], values = [];
+      var abs = [], values = [[],[]];
       var res = JSON.parse(req.responseText);
-      var ct = 5;
-      for(var cel in res) {
-        values.push(parseInt(res[cel][1]));
-        abs.push(res[cel][0]);  
-        /*if(ct++ == 5) {
+      var ct = 3;
+      for(var cel in res[1]) {
+        values[0].push(parseInt(res[0][cel][1]));
+        values[1].push(parseInt(res[1][cel][1]));
+        abs.push(res[0][cel][0]);  
+        /*if(ct++ == 3) {
           ct = 0;
-          abs.push(res[cel][0]);  
+          abs.push(res[0][cel][0]);  
         } else
           abs.push('');*/
       }
 
       var lineChartData = {
             title: {
-                text: 'Monthly Average Temperature',
+                text: 'Annual Salary',
                 x: -20 //center
             },
             subtitle: {
-                text: 'Source: WorldClimate.com',
+                text: 'Source: insee.fr',
                 x: -20
             },
             xAxis: {
@@ -54,7 +55,7 @@ function age_sexe_f() {
             yAxis: {
                 min: 0, 
                 title: {
-                    text: 'Temperature (°C)'
+                    text: 'Annaul Salary (€)'
                 },
                 plotLines: [{
                     value: 0,
@@ -63,7 +64,7 @@ function age_sexe_f() {
                 }]
             },
             tooltip: {
-                valueSuffix: '°C'
+                valueSuffix: '€'
             },
             legend: {
                 layout: 'vertical',
@@ -72,8 +73,11 @@ function age_sexe_f() {
                 borderWidth: 0
             },
             series: [{
-                name: 'Tokyo',
-                data: values
+                name: 'Femmes',
+                data: values[0]
+            },{
+                name: 'Hommes',
+                data: values[1]
             }]
       }
       console.log(values);
