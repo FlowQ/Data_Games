@@ -1,0 +1,13 @@
+Fiche de correspondance entre fichiers et noms
+
+A) Salaires nets annuels moyens des postes à temps complet (source DADS http://www.insee.fr/fr/themes/detail.asp?reg_id=0&ref_id=ir-sls2010&page=irweb/sls2010/dd/sls20102.htm) 
+	* 01 - salaire net moyen  "Selon le sexe (en niveaux, évolutions et indices) Période : 1950-2010"
+	* 02a - sexe sociopro "Selon le sexe et la catégorie socioprofessionnelle Période : 1984-2010"
+	* 02b - sexe sociopro "Selon le sexe et la catégorie socioprofessionnelle Période : 1950-1983"
+	* 03 - sexe age "Selon le sexe et l'âge Période : 1962-2010"
+	* 04a - sexe secteur "Selon le sexe et le secteur d'activité regroupé (NAF rev2-6 postes) Période : 2008-2010"
+	* 04b - sexe secteur "Selon le sexe et le secteur d'activité regroupé (NAF rev2-6 postes) Période : 1993-2007"
+	* 04c - sexe secteur "Selon le sexe et le secteur d'activité regroupé (NAF rev2-6 postes) Période : 1962-1992"
+	* 05 - taille secteur "Selon la taille de l'établissement et l'activité Période : 1976-2010"
+	* 06 - sexe region "Selon le sexe et la région de résidence Période : 1966-2010"
+	* 07 - salaire net moyen simple "Distribution des salaires nets annuels moyens selon le sexe Période : 1950-2010"
